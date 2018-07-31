@@ -12,3 +12,18 @@
     font-weight: 200;
     border: 1px solid white;
 }
+
+
+
+
+#home-color {
+    background-color: #000000;
+}
+
+#home-screen {
+    height: 100vh;
+}
+
+.pink-box {
+    background-color: hotpink;
+}
