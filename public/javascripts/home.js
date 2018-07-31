@@ -13,9 +13,11 @@ jQuery(function($) {
     $( document ).ready(function() {
         alert("hello");
         if ($(".pink-box").isInViewport()) {
-            $(".pink-box").stop().animate({
-                width : "60%",
-            }, 50);
+            $(".pink-box").velocity( {
+                width: 70%,
+            }, {
+                duration: 3350,
+            });
         }
 
     });
