@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Virtual Mind</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="A Virtual Reality Experience via A-Frame">
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+</head>
+<body>
+<a-scene>
+    <a-ocean color="#3ebfea" depth="5" width="100" opacity="0.75"></a-ocean>
+    <a-entity position="0 40 -15" particle-system="color: white,aqua; particleCount:1000; velocityValue:0 5 -2"></a-entity>
+    <a-entity position="20 20 -15" particle-system="color: white,pink; particleCount:1500; velocityValue:0 25 -5"></a-entity>
+    <a-entity position="-20 20 -15" particle-system="color: white,green; particleCount:3000; velocityValue:0 15 -1"></a-entity>
+    <!--       <a-box id="box" position="-1 0.5 -3" rotation="0 45 0" height="0.25" width="0.25" depth="0.25" color="#4CC3D9" shadow></a-box>
+          <a-sphere id="sphere" position="0 1.25 -5" radius=".25" color="#EF2D5E" rotation="0 0 45" shadow></a-sphere>
+          <a-cylinder id="cylinder" position="1 0.75 -3" radius="0.1" height="0.5" color="#FFC65D" rotation="0 0 70" shadow></a-cylinder> -->
+    <a-sky color="#000000"></a-sky>
+</a-scene>
+</body>
+<script>
+    var sphere = document.querySelector("#sphere");
+    var t = 0;
+
+
+    var cylinder = document.querySelector("#cylinder");
+    var eulerX = 0;
+    var eulerZ = 70;
+
+    var square = document.querySelector("#box");
+    var eulerSX = 0;
+    var eulerSY = 45;
+    var eulerSZ = 0;
+    var s = 0;
+
+    function rotate() {
+        eulerX += 1;
+        eulerZ += 1;
+        if(eulerX >= 360) {
+            eulerX -= 360;
+        }
+        if(eulerZ >= 360) {
+            eulerZ -= 360
+        }
+        requestAnimationFrame(rotate);
+        cylinder.object3D.rotation.z = THREE.Math.degToRad(eulerZ);
+        cylinder.object3D.rotation.x = THREE.Math.degToRad(eulerX);
+    }
+
+    function manip() {
+        eulerSX += 1;
+        eulerSY -= 2;
+        eulerSZ += 2;
+        s += 0.01;
+        if(eulerSX >= 360) {
+            eulerSX -= 360;
+        }
+        if(eulerSY <= -360) {
+            eulerSY += 360
+        }
+        if(eulerSZ >= 360) {
+            eulerSZ -= 360
+        }
+
+        requestAnimationFrame(manip);
+
+        square.object3D.rotation.z = THREE.Math.degToRad(eulerSZ);
+        square.object3D.rotation.y = THREE.Math.degToRad(eulerSY);
+        square.object3D.rotation.x = THREE.Math.degToRad(eulerSX);
+        square.setAttribute('position', (1*Math.sin(t*7))+ ' ' + (1*Math.sin(t*7)+1.5)+ ' ' +  (0.75*Math.sin(t*3)-3));
+    }
+
+    function render() {
+        t += 0.01;
+        requestAnimationFrame(render);
+        sphere.setAttribute('position', '-3 '+(2*Math.sin(t*5)+3)+' -5');
+    }
+
+    render();
+    rotate();
+    manip();
+</script>
+</html>
