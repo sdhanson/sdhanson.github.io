@@ -13,12 +13,7 @@ jQuery(function($) {
     $( document ).ready(function() {
         alert("hello");
         if ($(".pink-box").isInViewport()) {
-            $(".pink-box").velocity( {
-                width: 70%,
-            }, {
-                duration: 3350,
-            });
+            $(".pink-box").velocity( { width: "70%" }, 1000);
         }
-
     });
 })(jQuery);
