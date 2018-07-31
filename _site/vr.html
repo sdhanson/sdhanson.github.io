@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Virtual Mind</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="A Virtual Reality Experience via A-Frame">
+    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+    <script src="https://rawgit.com/feiss/aframe-environment-component/master/dist/aframe-environment-component.min.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v4.1.2/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+</head>
+<body>
+<a-scene>
+    <a-ocean color="#3ebfea" depth="5" width="100" opacity="0.75"></a-ocean>
+    <a-entity position="0 40 -15" particle-system="color: white,aqua; particleCount:1000; velocityValue:0 5 -2"></a-entity>
+    <a-entity position="20 20 -15" particle-system="color: white,pink; particleCount:1500; velocityValue:0 25 -5"></a-entity>
+    <a-entity position="-20 20 -15" particle-system="color: white,green; particleCount:3000; velocityValue:0 15 -1"></a-entity>
+    <a-sky color="#000000"></a-sky>
+</a-scene>
+</body>
+</html>
