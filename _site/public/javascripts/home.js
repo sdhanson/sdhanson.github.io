@@ -13,5 +13,8 @@ jQuery(function($) {
         if ($(".pink-box").isInViewport()) {
             $(".pink-box").css("background-position", "right bottom");
         }
+        if ($(".white-box").isInViewport()) {
+            $(".white-box").css("background-position", "top left");
+        }
     });
 })(jQuery);
