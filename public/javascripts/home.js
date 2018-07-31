@@ -8,6 +8,7 @@ $.fn.isInViewport = function() {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+alert("here");
 
 jQuery(function($) {
     $( document ).ready(function() {
