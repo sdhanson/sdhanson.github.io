@@ -14,20 +14,12 @@
 }
 
 #home-color {
-    background-color: #000000;
     background-color: #ffd8de;
 }
 
 #home-screen {
     height: 100vh;
 }
-
-/*.pink-box {*/
-    /*background-color: white;*/
-    /*width: 0;*/
-    /*height: 70%;*/
-    /*position: relative;*/
-/*}*/
 
 .roboto-text {
     font-family: 'Roboto', sans-serif;
@@ -47,10 +39,6 @@
     background-position:left bottom;
     transition:all 1.5s ease;
 }
-
-/*#home-screen .pink-box:hover {*/
-    /*background-position:right bottom;*/
-/*}*/
 
 #home-screen .pink-offset {
     margin-left: 22%;
@@ -87,4 +75,102 @@
 
 #home-screen .white-link {
     margin-top: 20px;
+}
+
+#home-screen .white-link a {
+    position: relative;
+    text-decoration: none;
+}
+
+#home-screen .white-link a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 0;
+    top: 30px;
+    left: 0;
+    background-color: #ffd8de;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#home-screen .white-link a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+#resume-screen {
+    height: 120vh;
+    margin: 0;
+    padding: 0;
+}
+
+#resume-screen .box {
+    width:100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+
+    background: linear-gradient(to bottom, #ffd8de 50%, #b8dbfc 50%);
+    background-size: 100% 200%;
+    background-position: top;
+    transition:all 1s ease;
+}
+
+#resume-screen #resume-frame {
+    height: 95vh;
+    width: auto;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+
+#about-screen {
+    height: 120vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+#about-screen .about-text {
+    font-size: 100px;
+    color: white;
+    font-weight: 600;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+#about-screen #about-row {
+    margin-top: 2%;
+}
+
+#about-screen .about-paragraph-title-text {
+    color: white;
+    font-size: 2.0rem;
+    font-weight: 600;
+}
+
+#about-screen .about-paragraph-text {
+    margin-top: 10px;
+    color: black;
+    font-size: 1.2rem;
+}
+
+#about-screen #about-image {
+    margin-top: 2%;
+    height: 50vh;
+    width: auto;
+}
+
+#about-screen .paragraph {
+    width: 80%;
+}
+
+.blue {
+    color: white;
+    font-weight: 600;
 }
