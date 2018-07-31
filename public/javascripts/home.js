@@ -10,7 +10,6 @@ $.fn.isInViewport = function() {
 
 jQuery(function($) {
     $( document ).ready(function() {
-        alert("hello2");
         if ($(".pink-box").isInViewport()) {
             $(".pink-box").velocity( { width: "100%" }, 600);
         }

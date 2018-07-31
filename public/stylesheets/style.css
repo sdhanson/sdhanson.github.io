@@ -23,15 +23,15 @@
 
 .pink-box {
     background-color: white;
-    width: 10%;
+    width: 0;
     height: 70%;
-    margin-bottom: 2%;
 }
 
 .title-text {
     font-family: 'Roboto', sans-serif;
     font-size: 500px;
     color: black;
+    margin-bottom: -10px;
 }
 
 
