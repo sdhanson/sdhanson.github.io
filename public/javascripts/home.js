@@ -11,7 +11,7 @@ $.fn.isInViewport = function() {
 jQuery(function($) {
     $( document ).ready(function() {
         if ($(".pink-box").isInViewport()) {
-            $(".pink-box").velocity( { width: "100%" }, 600);
+            $(".pink-box").css("background-position", "right bottom");
         }
     });
 })(jQuery);

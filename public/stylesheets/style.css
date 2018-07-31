@@ -15,6 +15,7 @@
 
 #home-color {
     background-color: #000000;
+    background-color: #ffd8de;
 }
 
 #home-screen {
@@ -30,7 +31,7 @@
 
 .title-text {
     font-family: 'Roboto', sans-serif;
-    font-size: 500px;
+    font-size: 300px;
     color: black;
     /*margin-bottom: -10px;*/
     /*position: absolute;*/
@@ -39,7 +40,9 @@
 
 #home-screen .pink-box {
     width:100%;
-    float:left;
+    /*float:left;*/
+    margin: 0;
+    padding: 0;
     background: black;
     /* Old browsers */
     background: linear-gradient(to right, black 50%, white 50%);
