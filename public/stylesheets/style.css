@@ -27,3 +27,9 @@
     height: 70%;
     margin-bottom: 2%;
 }
+
+.title-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    color: black;
+}
