@@ -19,6 +19,16 @@ jQuery(function($) {
         if($(".box").isInViewport()) {
             $(".box").css("background-position", "bottom right");
         }
+
+        $('[data-toggle=collapse]').on("mouseenter", function (e) {
+            var idName = $(this).attr("id").split(' ');
+            $(".project-collapse-text").text($("." + idName).text());
+        });
+
+        $('[data-toggle=collapse]').on("mouseleave", function (e) {
+            $(".project-collapse-text").text("");
+        });
+
     });
 
     $( document ).scroll(function() {
