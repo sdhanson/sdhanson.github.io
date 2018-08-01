@@ -8,8 +8,17 @@ $.fn.isInViewport = function() {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+$('#resume-frame').on("mouseenter", function() {
+    $(this).css("opacity", ".75");
+});
+
+$('#resume-frame').on("mouseleave", function() {
+    $(this).css("opacity", "1");
+});
+
 jQuery(function($) {
     $( document ).ready(function() {
+        alert($(window).width());
         if ($(".pink-box").isInViewport()) {
             $(".pink-box").css("background-position", "right bottom");
         }
