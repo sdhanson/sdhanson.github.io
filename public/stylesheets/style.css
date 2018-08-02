@@ -13,24 +13,6 @@
     border: 1px solid white;
 }
 
-@media (min-width: 992px) {
-
-}
-
-@media (max-width: 991px) {
-
-}
-
-@media (max-width: 768px) {
-
-}
-
-
-
-@media (max-width: 450px) {
-
-}
-
 @media (min-width: 1300px) {
     #home-screen .pink-text {
         font-size: 200px;
@@ -68,10 +50,10 @@
     }
 
     #about-screen {
-        height: 90vh;
+        height: 700px;
         margin: 0;
         padding: 0;
-        overflow-x: hidden;
+        overflow: hidden;
     }
 
     #about-screen .paragraph {
@@ -113,7 +95,7 @@
 
 @media (min-width: 991px) {
     #about-screen {
-        height: 110vh;
+        height: 900px;
         margin: 0;
         padding: 0;
         overflow-x: hidden;
@@ -170,14 +152,14 @@
     }
 
     #resume-screen {
-        height: 120vh;
+        height: 100vh;
         margin: 0;
         padding: 0;
         overflow-x: hidden;
     }
 
     #about-screen {
-        height: 120vh;
+        height: 1000px;
         margin: 0;
         padding: 0;
         overflow-x: hidden;
@@ -206,9 +188,17 @@
 
     #project-screen .project-collapse-text {
         padding: 50px;
+        padding-top: 10px;
         color: white;
-        font-size: 1.5rem;
+        font-size: 16px;
+        font-weight: 200;
+    }
+
+    #home-screen .white-text {
+        font-size: 16px;
+        color: #ffd8de;
         font-weight: 600;
+        margin-left: 3%;
     }
 
 }
@@ -238,10 +228,17 @@
     #project-screen .project-collapse-text {
         margin-top: 10px;
         padding: 50px;
-        padding-left: 200px;
         color: white;
-        font-size: 1.5rem;
+        font-size: 20px;
+        font-weight: 200;
+    }
+
+
+    #home-screen .white-text {
+        font-size: 25px;
+        color: #ffd8de;
         font-weight: 600;
+        margin-left: 3%;
     }
 }
 
@@ -326,13 +323,7 @@
 
 #home-screen .white-offset {
     margin: 0;
-    margin-top: 100%;
-}
-#home-screen .white-text {
-    font-size: 25px;
-    color: #ffd8de;
-    font-weight: 600;
-    margin-left: 3%;
+    margin-top: 25vh;
 }
 
 #home-screen .white-link {
@@ -403,54 +394,61 @@
 }
 
 #project-screen {
-    height: 90vh;
+    height: 1000px;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: #b8dbfc;
-}
-
-#project-screen .project-row {
-    height: 40vh;
+    padding-top: 5%;
 }
 
 #project-screen .project-collapse {
-    height: 30vh;
+    height: 600px;
     margin: 0;
     margin-top: 2%;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
     background-color: #b8dbfc;
 }
 
 #project-decoration-screen {
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 #project-decoration-left{
-    height: 30vh;
+    height: 200px;
     width: 100%;
     background: linear-gradient(to bottom right, #b8dbfc 50%, #ffd8de 50%);
 }
 
 #project-decoration-right{
-    height: 30vh;
+    height: 200px;
     width: 100%;
     background: linear-gradient(to bottom left, #b8dbfc 50%, #ffd8de 50%);
 }
 
+#project-screen div {
+    color: black;
+}
+
+.project-title {
+    color: white;
+    font-size: 2.5rem;
+}
+
 #media-screen {
-    height: 40vh;
+    height: 300px;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 #media-screen .media-row {
     margin-top: 100px;
     width: 100%;
+    padding-left: 5%;
 }
 
 #media-screen .fab {

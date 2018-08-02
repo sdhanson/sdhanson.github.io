@@ -18,7 +18,6 @@ $('#resume-frame').on("mouseleave", function() {
 
 jQuery(function($) {
     $( document ).ready(function() {
-        alert($(window).width());
         if ($(".pink-box").isInViewport()) {
             $(".pink-box").css("background-position", "right bottom");
         }
@@ -31,11 +30,11 @@ jQuery(function($) {
 
         $('[data-toggle=collapse]').on("mouseenter", function (e) {
             var idName = $(this).attr("id").split(' ');
-            $(".project-collapse-text").text($("." + idName).text());
+            $(".project-collapse-text").html($("." + idName).html());
         });
 
         $('[data-toggle=collapse]').on("mouseleave", function (e) {
-            $(".project-collapse-text").text("");
+            $(".project-collapse-text").html("");
         });
 
     });
