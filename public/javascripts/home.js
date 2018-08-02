@@ -33,7 +33,7 @@ jQuery(function($) {
             $(".project-collapse-text").html($("." + idName).html());
         });
 
-        $('[data-toggle=collapse]').on("mouseleave", function (e) {
+        $('.project-collapse').on("mouseleave", function (e) {
             $(".project-collapse-text").html("");
         });
 
