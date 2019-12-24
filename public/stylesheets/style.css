@@ -1,4 +1,21 @@
-#enter-color {
+body, html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("/public/images/hollywood.jpeg");
+
+  /* Full height */
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*#enter-color {
     background-color: #000000;
 }
 
@@ -469,4 +486,4 @@
 
 .fa-linkedin {
     color: #0077B5;
-}
+}*/
