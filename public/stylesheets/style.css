@@ -6,6 +6,6 @@ body, html {
   /* pretty baby */
   position: center;
   object-fit: cover;
-  max-width: 100%; 
-  height: auto;
+  max-height: 100%; 
+  width: auto;
 }
